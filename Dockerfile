@@ -9,5 +9,6 @@ RUN groupadd -g 850 appdcn
 RUN useradd -u 850 -g 850 -M -s /bin/false appdcn
 RUN mkdir /u
 RUN mkdir /u/app
+RUN mkdir /u/control
 RUN chown -R appdcn:appdcn /u/*
 VOLUME ["/u/app"]
