@@ -5,7 +5,9 @@ RUN apt-get install -y git
 RUN apt-get install -y build-essential
 RUN apt-get install -y python python-dev python-pip python-virtualenv
 RUN apt-get install -y uwsgi uwsgi-plugin-python
+RUN groupadd -g 850 appdcn
+RUN useradd -u 850 -g 850 -M -s /bin/false appdcn
 RUN mkdir /u
 RUN mkdir /u/app
-RUN mkdir /u/control
-VOLUME ["/u/control"]
+RUN chown -R appdcn:appdcn /u/*
+VOLUME ["/u/app"]
