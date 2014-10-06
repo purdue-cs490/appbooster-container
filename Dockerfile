@@ -11,4 +11,4 @@ RUN mkdir /u/app
 RUN mkdir /u/control
 RUN chown -R appdcn:appdcn /u/*
 RUN cp /usr/share/zoneinfo/US/Eastern /etc/localtime
-VOLUME ["/u/app"]
+VOLUME ["/u/app", "/u/control"]
