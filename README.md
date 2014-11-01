@@ -2,4 +2,4 @@
 
 ## Build container image
 
-```docker build .```
+```docker build -t "appbooster-container" .```
