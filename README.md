@@ -6,4 +6,4 @@
 
 ## Start container
 
-```docker run -i -t -v /u/controls/test:/u/control debian-appbooster "/bin/bash"```
+```docker run -i -t -v /u/controls/test:/u/control appbooster-container "/bin/bash"```
