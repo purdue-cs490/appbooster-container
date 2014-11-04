@@ -8,10 +8,11 @@ ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
 RUN apt-get update && apt-get -y upgrade
+RUN apt-get install -y git python locales tzdata
+
 RUN locale-gen en_US.UTF-8
 RUN cp /usr/share/zoneinfo/US/Eastern /etc/localtime
 
-RUN apt-get install -y git python
 RUN mkdir -p /srv/configs
 RUN git clone https://github.com/purdue-cs490/appbooster-configs.git /srv/configs
 RUN /srv/configs/install container
