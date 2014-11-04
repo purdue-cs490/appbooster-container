@@ -19,3 +19,4 @@ RUN /srv/configs/install container
 RUN rm -rf /srv
 
 VOLUME ["/u/app", "/u/control"]
+CMD ["uwsgi", "--ini", "/etc/uwsgi/apps-enabled/app.ini"]
