@@ -16,7 +16,9 @@ RUN cp /usr/share/zoneinfo/US/Eastern /etc/localtime
 RUN mkdir -p /srv/configs
 RUN git clone https://github.com/purdue-cs490/appbooster-configs.git /srv/configs
 RUN /srv/configs/install container
+
 RUN rm -rf /srv
+RUN apt-get clean
 
 VOLUME ["/u/app", "/u/control"]
 CMD ["uwsgi", "--ini", "/etc/uwsgi/apps-enabled/app.ini"]
